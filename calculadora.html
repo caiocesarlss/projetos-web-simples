@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" lang="pt-br">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculadora-estilo.css">
+  <script src="calculadora-script.js"></script>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <th id="campo" colspan = 4>0</th>
+    </tr>
+    <tr>
+      <td onclick="limparCampo()">CE</td>
+      <td onclick="limparTudo()">C</td>
+      <td onclick="apagarDigito()">⌫</td>
+      <td onclick="addOperador('/')">÷</td>
+    </tr>
+    <tr>
+      <td onclick="addNum(7)">7</td>
+      <td onclick="addNum(8)">8</td>
+      <td onclick="addNum(9)">9</td>
+      <td onclick="addOperador('*')">x</td>
+    </tr>
+    <tr>
+      <td onclick="addNum(4)">4</td>
+      <td onclick="addNum(5)">5</td>
+      <td onclick="addNum(6)">6</td>
+      <td onclick="addOperador('-')">-</td>
+    </tr>
+    <tr>
+      <td onclick="addNum(1)">1</td>
+      <td onclick="addNum(2)">2</td>
+      <td onclick="addNum(3)">3</td>
+      <td onclick="addOperador('+')">+</td>
+    </tr>
+    <tr>
+      <td colspan = 2 onclick="addNum(0)">0</td>
+      <td onclick="addVirgula()">,</td>
+      <td onclick="calcResult()">=</td>
+    </tr>
+  </table>
+
+</body>
+</html>
