@@ -67,9 +67,19 @@ function addVirgula() {
 }
 
 function addOperador(op) {
+	if(contOp == 0) {
+		contOp = 1;
+		contNum = 0;
+		
+	} else {
+		if(contNum > 0) {
+			calcResult();
+			y = result;
+			contOp = 0;
+		}
+	}
+	
 	operador = op;
-	contOp = 1;
-	contNum = 0;
 }
 
 function calcResult() {
@@ -119,6 +129,7 @@ function apagarDigito() {
 			document.getElementById("campo").innerHTML = texto.slice(0, (texto.length - 1));
 			texto = document.getElementById("campo").innerHTML;
 			x = Number(texto.replace(",","."));
+			contNum = 1;
 		}
 	} else {
 		if(texto.length == 1) {
@@ -130,6 +141,7 @@ function apagarDigito() {
 			document.getElementById("campo").innerHTML = texto.slice(0, (texto.length - 1));
 			texto = document.getElementById("campo").innerHTML;
 			y = Number(texto.replace(",","."));
+			contNum = 1;
 		}
 	}
 }
